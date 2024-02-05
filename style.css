@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Instrument+Serif&family=Montserrat&family=Rubik+Storm&family=Teko&display=swap');/* font-family: 'Instrument Serif', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Rubik Storm', system-ui;
+font-family: 'Teko', sans-serif; */
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right, pink ,rgb(217, 153, 164), rgb(182, 182, 125));
+    background-image: linear-gradient(to right,#355c7d,#6c5b7b,#c06c84);
+}
+navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(28, 28, 28);
+    color: azure;
+    margin: 0;
+    padding: 6px;
+    position: sticky;
+    top: 0;
+}
+
+#logo{
+    font-family: 'Honk', system-ui;
+}
+navbar>div{
+    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+navbar>div>input{
+    height: 24px;
+    align-self: center;
+    width: 70%;
+    margin: 0;
+}
+navbar>div>button{
+    height: 24px;
+    width: 25%;
+    align-self: center;
+    background-color: orange;
+    border: 0;
+    color: aliceblue;
+    margin: 0;
+}
+navbar>h4{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#todayDealsBox{
+    margin: 12px 2%;
+    padding: 12px;
+    background-color: lavender;
+    border-radius: 8px;
+}
+#todayDealsBox>h3{
+    
+    padding: 0;
+    margin: 0;
+}
+.productContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    
+}
+/* width */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: grey;
+    border-radius: 8px;
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(14, 1, 1); 
+  }
+.card{
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 200px;
+    height: 250px;
+    background-color: honeydew;
+    padding: 6px 12px;
+    border-radius: 24px;
+    margin: 6px;
+    margin-bottom: 16px;
+    box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.51);
+}
+
+.card img{
+    height: 150px ;
+    width: 150px;
+    border-radius: 24px;
+}
+.productName{
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+.card h5{
+    font-family: 'Montserrat', sans-serif;
+    margin: 4px 0px;
+    
+}
+.card p{
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    margin: 4px 0px;
+}
+
+
+/* Category based products box */
+.categoryContainer{
+    margin: 12px 2%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    
+}
+.productCategories{
+    
+    width: 30vw;
+    
+    padding: 16px;
+    margin-top: 2%;
+    
+    background-color: lavender;
+}
+
+.productCategories>h3{  
+    padding: 0;
+    margin: 0;
+}
+
+.categoryImgBox{
+
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow: hidden;
+    margin-top: 6px;
+    gap: 12px;
+}
+.categoryImg>img{
+    height: 100px;
+    width: 100px;
+}
+.categoryImg>p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 6px 2px;
+}
+
+a{  
+    color: skyblue;
+    margin-top: 6px;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .categoryContainer{
+        grid-template-columns: auto auto;
+    }
+    .productContainer{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    .productCategories{
+        width: 47vw;
+    }
+    .categoryImg>img{
+        height: 50px;
+        width: 50px;
+    }
+    .categoryImg>p{
+        font-size: 8px;
+    }
+    a{
+        font-size:8px;
+    }
+    .productCategories>h3{
+        font-size: 12px;
+    }
+}
